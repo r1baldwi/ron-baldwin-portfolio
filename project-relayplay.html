@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>RelayPlay — Ron Baldwin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">Ron Baldwin</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work" class="active">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Project 03</div>
+    <h1>RelayPlay</h1>
+    <p class="role-line">A personalized weekend-recommendation service, designed and built end to end.</p>
+    <div class="meta-row">
+      <span><strong>Role</strong> Founder, CEO, Designer</span>
+      <span><strong>Company</strong> San Diego, 2020–2022</span>
+      <span><strong>Outcome</strong> ~300 subscribers, ~15K followers</span>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap max-text">
+    <div class="case-cover">
+      <img src="relayplay-cover.png" alt="RelayPlay Instagram profile" style="object-fit: contain; background: #000;">
+    </div>
+    <p class="img-caption">Local expert profiles and personalized recommendations. UX/UI designed in Figma; React platform built by an engineering partner from those specs.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap max-text">
+
+    <div class="frame-block">
+      <div class="frame-label">Problem</div>
+      <div class="frame-body">
+        <p>Weekend planning meant thirty browser tabs across Eventbrite, Meetup, and Airbnb Experiences — and by the time a decision got made, tickets were sold out. Algorithmic recommendation apps couldn't replicate the warmth of a friend's suggestion.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">HCI Approach</div>
+      <div class="frame-body">
+        <p>Built a human-in-the-loop model: local experts curate, software delivers at scale. Designed every screen in Figma so the delivery moment — five picks, every Friday — felt like a personal note from a friend, not a marketplace browse.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">User Flow</div>
+      <div class="frame-body">
+        <div class="frame-flow">
+          <span class="flow-step">Subscribe</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Friday curation arrives</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Follow an expert or request one</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Book the experience</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">Outcome</div>
+      <div class="frame-body">
+        <p>Grew from 85 to ~300 subscribers and ~15,000 Instagram followers. Validated that people pay for curation that feels personal — but COVID collapsed the event economy before the business model was solved.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">Reflection</div>
+      <div class="frame-body">
+        <p>Should have proven the unit economics — price, curation cost, margin — before building a single screen. People loved the product. The money never followed, and I never answered that question early enough for it to matter.</p>
+      </div>
+    </div>
+
+    <details class="full-story">
+      <summary>Read the full case study</summary>
+      <div class="full-story-body">
+        <h4>Problem framing</h4>
+        <p>I'd get to Friday evening with no idea what to do with my weekend, open a browser, and have thirty tabs open within ten minutes across SD Reader, Facebook Events, Eventbrite, Meetup, and Airbnb Experiences. By the time I narrowed it down, tickets were sold out. I knew people who weren't like this — friends who seemed to know about every cool thing happening in the city. That asymmetry was the market gap.</p>
+        <p>Research backed the instinct: 72% of millennials preferred spending on experiences over things, 69% reported FOMO when they couldn't attend events. The demand was real. Discovery infrastructure was the bottleneck.</p>
+
+        <blockquote>
+          The product isn't an event aggregator. The product is a personal relationship with a knowledgeable curator, delivered through software.
+        </blockquote>
+
+        <h4>Human-in-the-loop, by design</h4>
+        <p>Most weekend-discovery products in 2020 bet on pure algorithmic recommendation. That bet underestimated the cold-start problem — a new user has no signal — and underestimated the value of taste itself. A great recommendation isn't a statistical match; it's an act of interpretation. We took on the cost of human curation in exchange for warmth the competition couldn't match.</p>
+
+        <h4>From Friday delivery to a curator platform</h4>
+        <p>The product started as simply as possible: a landing page, a Thursday email with a PowerPoint of five curated experiences, no app, no algorithm. The point was validating demand before building anything — and the delivery moment itself, five picks with expert notes, became the design anchor everything else hung from.</p>
+        <p>Centralized curation became a bottleneck to growth, so the product evolved into a web app where experts built their own collections by category and users could follow a specific curator or request one directly.</p>
+
+        <h4>Build and execution</h4>
+        <p>I designed the full UX/UI in Figma — every screen, state, and interaction — before AI-assisted design tooling existed, and partnered with a development team who built the React platform from those specs. I also led brand, the Instagram presence, acquisition, and the operational rhythm behind the weekly curation.</p>
+
+        <h4>The business model we never solved</h4>
+        <p>We assumed a $10/month subscription — clean and low-friction. It never covered the real cost of human curation. We tested ticketed events, brand partnerships, and premium tiers; none closed cleanly. Then COVID collapsed the event economy the product depended on entirely.</p>
+
+        <h4>What I'd do differently</h4>
+        <p>I treated the business model as something we'd figure out as we grew — the standard founder assumption that if people love it, the money follows. People loved RelayPlay. The money didn't follow. I should have answered "at what price does this cover curation and produce a margin" before building a single screen.</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<nav class="case-nav">
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%;">
+    <a href="project-instant-ink.html">← Instant Ink + Paper</a>
+    <a href="project-intuit.html">Next: Intuit Business Formation →</a>
+  </div>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-meta">© 2026 Ron Baldwin · San Diego, CA</div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

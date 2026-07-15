@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Instant Ink + Paper — Ron Baldwin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">Ron Baldwin</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work" class="active">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Project 02</div>
+    <h1>Instant Ink + Paper</h1>
+    <p class="role-line">A 0-to-1 subscription add-on, built on a variable that can't be fully measured.</p>
+    <div class="meta-row">
+      <span><strong>Role</strong> Lead Product Manager</span>
+      <span><strong>Company</strong> HP Instant Ink</span>
+      <span><strong>Launched</strong> September 2021</span>
+      <span><strong>Outcome</strong> 1M+ subscribers</span>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap max-text">
+    <div class="case-cover">
+      <img src="instant-ink-cover.png" alt="HP Instant Ink Paper add-on service promotional image">
+    </div>
+    <p class="img-caption">The launched Instant Ink Paper add-on service.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap max-text">
+
+    <div class="frame-block">
+      <div class="frame-label">Problem</div>
+      <div class="frame-body">
+        <p>HP's ink subscription worked because ink use was fully observable — the printer reported pages, HP shipped ink before the customer ran out. Paper isn't observable the same way: people draw on it, write on it, and craft with it. This "leakage" broke the model that made Instant Ink work.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">HCI Approach</div>
+      <div class="frame-body">
+        <p>Ran a five-stage research program — survey, mock paywall, real paper shipped to ~1,000 homes, alpha/beta, launch — so each stage answered one unknown before the next investment. The paper community study (stage three) revealed that customers hold a fuzzy mental model of their own paper stock, not a precise one.</p>
+        <p>Designed for that fuzziness instead of fighting it: a customer-partnered service contract (honest framing, easy top-ups) as the primary trust mechanism, with a data-calibrated absorption buffer layered quietly behind it.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">User Flow</div>
+      <div class="frame-body">
+        <div class="frame-flow">
+          <span class="flow-step">Enroll</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Paper arrives on cycle</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Dashboard shows status</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">One-tap top-up anytime</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">Outcome</div>
+      <div class="frame-body">
+        <p>Launched September 2021 to existing Instant Ink customers. Scaled to over one million paper subscribers.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">Reflection</div>
+      <div class="frame-body">
+        <p>Spent the first six months chasing exact measurement precision that was never achievable. The architecture that shipped works because it doesn't require precision — it should have been the starting assumption, not the conclusion.</p>
+      </div>
+    </div>
+
+    <details class="full-story">
+      <summary>Read the full case study</summary>
+      <div class="full-story-body">
+        <h4>Problem framing</h4>
+        <p>By 2021, HP Instant Ink had matured into a category-defining subscription. Paper was the natural attach — the customer was already paying HP every month and already needed paper to use the ink. The question wasn't whether to launch. It was how.</p>
+        <p>The how question was harder than it looked, because paper doesn't behave like ink. People print on it, but also draw on it, write on it, fold it into airplanes for their kids, line birdcages with it. We called this paper leakage. If we shipped too late, customers ran out and churned. If we shipped too early, customers stacked up paper and felt cheated. Either failure mode would damage the brand we'd spent a decade building on the ink side.</p>
+
+        <blockquote>
+          How precise does our usage tracking need to be when the variable we care about is partially unobservable? What is the true leakage rate in real homes? And what do we ask of the customer in exchange?
+        </blockquote>
+
+        <h4>A phased research program</h4>
+        <p>Rather than running a single survey and committing to launch, I designed a five-stage program where each stage answered a different unknown, and we didn't move forward until the previous one returned a clear signal: concept research (surveys and interviews), an in-product demand test (a mock sign-up flow with a real credit-card field), the paper community (real paper shipped to ~1,000 homes for an extended period — the methodological breakthrough), alpha and beta at expanded enrollment, then general launch.</p>
+        <p>Each stage was the cheapest possible way to answer its specific question. We didn't pay to ship paper to a thousand homes until we'd validated that customers would type their credit card numbers. We didn't commit to pricing until we had real leakage data.</p>
+
+        <h4>The insight that reframed the architecture</h4>
+        <p>Customers didn't have a precise mental model of their paper inventory — they knew they were "running low" or had "plenty," but no one could tell me, within 50 sheets, how much paper was in their house. That wasn't a research failure. It was the actual user model, and it inverted the problem: not "how do we build a sufficiently precise tracking system," but "how do we design a service that works with the customer's fuzzy model, rather than against it."</p>
+        <p>The shipped architecture was a hybrid. The customer-partnered model carried the trust — the service contract, the copy, the top-up flow. The Paper Community data fed a small, calibrated algorithmic absorption buffer layered behind it, giving most customers a little extra room without inflating shipments past what the unit economics could bear. The absorption layer sat behind the partnership, never in front of it.</p>
+
+        <blockquote>
+          We designed the customer as a partner in the inventory loop, not as a sensor in it. The trust was the design center. The absorption was the calibration. Each did what it was best at, and neither pretended to do the other's job.
+        </blockquote>
+
+        <h4>The customer-as-owner service contract</h4>
+        <p>Two moves implemented it: honest framing at enrollment ("this paper is for printing — if you use it for other purposes, you may run out before your next shipment," the entire service contract in twenty-two words), and a first-class top-up flow inside the dashboard, a peer to the rest of the product rather than a buried option.</p>
+
+        <h4>What I'd do differently</h4>
+        <p>I would have given up on exact paper-counting precision a lot earlier. The first six months were spent under an unstated assumption — inherited uncritically from the ink model — that the program could only launch once we had near-exact measurement. The architecture we eventually shipped works precisely because it doesn't require that.</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<nav class="case-nav">
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%;">
+    <a href="project-slide.html">← Slide by HP</a>
+    <a href="project-relayplay.html">Next: RelayPlay →</a>
+  </div>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-meta">© 2026 Ron Baldwin · San Diego, CA</div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

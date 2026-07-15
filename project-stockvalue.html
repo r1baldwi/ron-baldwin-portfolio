@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>StockValue.Ai — Ron Baldwin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">Ron Baldwin</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work" class="active">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Project 05</div>
+    <h1>StockValue.Ai</h1>
+    <p class="role-line">A financial analysis platform, designed and shipped solo with AI-native tools.</p>
+    <div class="meta-row">
+      <span><strong>Role</strong> Solo Designer & Builder</span>
+      <span><strong>Built</strong> 2025–2026</span>
+      <span><strong>Live at</strong> <a href="https://stockvalueai.netlify.app/" style="text-decoration: underline;">stockvalueai.netlify.app</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap max-text">
+    <div class="case-cover">
+      <img src="stockvalue-cover.png" alt="StockValue.Ai DCF model interface showing AAPL valuation" style="object-fit: contain;">
+    </div>
+    <p class="img-caption">Eight analysis modules — DCF, Key Metrics, Historical Charts, Fear Gauge, Price & EPS, CAPM & Alpha, Insider Trades, News — from a single stock symbol input.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap max-text">
+
+    <div class="frame-block">
+      <div class="frame-label">Problem</div>
+      <div class="frame-body">
+        <p>Serious financial analysis tools — DCF models, risk metrics — are either too shallow for real investors or too dense for anyone else. I wanted to test what one person could now ship solo with AI-assisted tooling, using a real, useful product as the proof.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">HCI Approach</div>
+      <div class="frame-body">
+        <p>Designed an information architecture that holds both audiences: eight analysis modules behind one stock-symbol input, editable assumptions for people who want to test their own thesis, sensible defaults for everyone else. Trust signals — last-updated timestamps, data source labels, fair-value-vs.-current-price framing — do the work of making the output feel credible.</p>
+        <p>Used Bolt.new and Claude Opus as a build partner: defining requirements precisely, reviewing every generated line, and directing the build rather than prompting blind.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">User Flow</div>
+      <div class="frame-body">
+        <div class="frame-flow">
+          <span class="flow-step">Enter a ticker</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">View DCF, risk & sentiment modules</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Adjust WACC/growth assumptions</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Compare fair value to market price</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">Outcome</div>
+      <div class="frame-body">
+        <p>A live, working tool with eight functional modules, integrated with real-time market data, that I and others use to make actual investment decisions. Proof that this category of product — five years ago, a small team and six figures of investment — is now shippable solo, in spare time, in months.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">Reflection</div>
+      <div class="frame-body">
+        <p>Should have written a formal design system before generating screens. It held together because I was the only reviewer — it's the piece of this workflow I'm now formalizing for client work, so a solo AI-native build stays as consistent as a team-built one.</p>
+      </div>
+    </div>
+
+    <details class="full-story">
+      <summary>Read the full case study</summary>
+      <div class="full-story-body">
+        <h4>Why this project is on the site</h4>
+        <p>The other four case studies show how I run strategy, research, and design at the scale of a corporate team. StockValue.Ai shows the other half: that one person, with the right product and design foundation, can carry a project through to a live, working build using AI-native tools instead of a full engineering team.</p>
+        <p>I didn't prompt blindly. I structured the information architecture, defined the financial logic, and designed the trust signals a serious user would need before Bolt.new and Claude Opus generated a line of code. An AI tool needs a clear spec and clear design intent to produce something coherent — without that scaffolding it produces a demo, not a product.</p>
+
+        <h4>Depth without intimidation</h4>
+        <p>A serious financial analysis tool has to show its work — DCF logic, WACC and growth assumptions, data sources — or a serious investor won't trust the output. But most people who'd benefit from a DCF valuation have never built one and don't want a wall of formulas. The architecture holds both: eight modules organized behind a single symbol input, editable assumptions surfaced for people who want them, sensible defaults for everyone else.</p>
+
+        <h4>Bolt.new as a development partner, not a shortcut</h4>
+        <p>I used Bolt.new, powered by Claude Opus, as the engineering partner — reviewing every piece of generated code, debugging the Alpha Vantage API integration when the model's first pass missed edge cases, iterating on UI in conversation instead of a sprint cycle. The judgment calls — when to trust generated code, when to rewrite it, how to keep the app maintainable as it grew — were mine to make.</p>
+
+        <h4>What I'd do differently</h4>
+        <p>I'd invest earlier in a written design system inside the AI tool's context — a component and pattern reference the way a Figma library provides a design team — rather than letting the visual language emerge screen by screen.</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<nav class="case-nav">
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%;">
+    <a href="project-intuit.html">← Intuit Business Formation</a>
+    <a href="index.html#work">All work →</a>
+  </div>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-meta">© 2026 Ron Baldwin · San Diego, CA</div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>

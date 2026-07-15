@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Slide by HP — Ron Baldwin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">Ron Baldwin</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work" class="active">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Project 01</div>
+    <h1>Slide by HP</h1>
+    <p class="role-line">A handheld printing ecosystem for crafters — device, ink, app, and CMS as one experience.</p>
+    <div class="meta-row">
+      <span><strong>Role</strong> Product Manager</span>
+      <span><strong>Company</strong> HP</span>
+      <span><strong>Scope</strong> Hardware + iOS/Android + CMS</span>
+      <span><strong>Outcome</strong> White-labeled, sold through Michaels</span>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap max-text">
+    <div class="case-cover">
+      <img src="slide-cover.png" alt="Slide by HP concept board showing the device, app, and content library">
+    </div>
+    <p class="img-caption">The Slide device, ecosystem, and companion app. Later white-labeled and shipped as the Printmaker (We R Memory Keepers), sold through Michaels.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap max-text">
+
+    <div class="frame-block">
+      <div class="frame-label">Problem</div>
+      <div class="frame-body">
+        <p>Millennial parents wanted to turn phone photos into physical keepsakes — scrapbooks, gifts, fabric, wood. Every existing option was slow, rigid, or flat-surface only: home printers needed setup, instant cameras gave one uneditable shot, print services took days.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">HCI Approach</div>
+      <div class="frame-body">
+        <p>Treated hardware, ink, app, and content as one system, not a device with supporting software. Mapped every way the device could fail mid-session and designed out the two that mattered most: battery dropout and ink dry-out, solved through form factor and onboarding rather than warning labels.</p>
+        <p>Built a multi-modal guidance system — a projected guide light, plus audio and haptic cues — so a human hand could hit printer-grade precision on uneven surfaces like wood and fabric.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">User Flow</div>
+      <div class="frame-body">
+        <div class="frame-flow">
+          <span class="flow-step">Pick up device</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Guide light shows placement</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Audio/haptic paces the motion</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Print complete signal</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Cover reflex protects ink</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">Outcome</div>
+      <div class="frame-body">
+        <p>Paused after a corporate reorganization. Later white-labeled and brought to market as the Printmaker by We R Memory Keepers, sold through Michaels and other crafting retailers.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">Reflection</div>
+      <div class="frame-body">
+        <p>Should have tested a software-first version — precision guidance for existing Bluetooth printers — before committing to custom hardware. The coordination layer was the real product; the device was just the surface that delivered it.</p>
+      </div>
+    </div>
+
+    <details class="full-story">
+      <summary>Read the full case study</summary>
+      <div class="full-story-body">
+        <h4>Problem framing</h4>
+        <p>By the late 2010s, HP had spent decades winning the home-printer market by selling capability — more features, more resolution, more paper sizes. But the customer that mattered most for the next decade — millennial moms — wasn't asking for capability. She was asking for a way to keep her family's memories alive that didn't feel like office work.</p>
+        <p>She took thousands of photos on her phone and wanted to put them in scrapbooks, gift them to grandparents, hand-letter notes on them, decorate fabric for a quilt, monogram a piece of wood for her kitchen. But the path from phone to physical artifact was full of friction: home printers required setup and dedicated space, instant cameras gave her a single non-editable shot, photo print services required a multi-day delivery cycle that killed the craft impulse, and none of them worked on anything but flat paper.</p>
+        <p>Slide was a skunkworks bet inside HP to build something different: a handheld, mobile-first device that could put printed content onto almost any surface, anywhere, in under thirty seconds. The product wasn't a printer. The product was a creativity tool.</p>
+
+        <blockquote>
+          Slide's design challenge wasn't "make a small printer." It was: how do you design a coherent system — device, content, mobile app, and the user's own hand — so the customer can turn any digital image into a physical artifact on any surface she chooses?
+        </blockquote>
+
+        <h4>The in-session reliability problem</h4>
+        <p>Most consumer electronics are designed around an idealized session: device charged, consumable fresh, environmental conditions stable. Slide's actual sessions weren't like that. A user might pick the device up after it had sat in a drawer for three weeks and expect it to be ready. I mapped every way the device could fail mid-session and ranked them by how badly each would damage trust.</p>
+        <p><strong>Battery dropout.</strong> A device that powers down mid-print ruins both the craft and the surface. We designed power management around sessions lasting anywhere from two minutes to several hours, with the companion app surfacing battery state proactively, before a session began.</p>
+        <p><strong>Ink dry-out.</strong> Left exposed, cartridges degraded in about thirty minutes. The cover became a functional part of the system — sealing the cartridge between sessions — solved through the unboxing, the onboarding message, and a form factor that looked incomplete without the cover. Telling the user "always cover your device" would have failed. Designing the system so that not covering it felt wrong succeeded.</p>
+
+        <h4>Precision printing on a non-flat world</h4>
+        <p>The hardest problem wasn't on the screen. It was the gap between where the user wanted the image to land and where the device actually deposited the ink — on uneven surfaces, held by an unsteady hand. Physical guides constrained the motion path. A projected guide light showed exactly where the next pixel would land — the moment a user's mental model snaps from "I'm holding a printer" to "I'm directing an image onto a surface." Audio and haptic signals told the user when to start, slow down, stop, and finish; visual-only signaling failed in testing because the user's eyes were on the surface, not the device.</p>
+
+        <h4>The content library as a creative-flow problem</h4>
+        <p>A handheld craft printer is only as useful as the content the user can put through it. We broke the content problem into three sources: the user's own phone library (needing framing and treatments to feel like craft content, not a snapshot), a curated and continuously refreshed content library (patterns, borders, templates — both a creativity prompt and a retention mechanic), and user-contributed content (the lowest-volume but highest-leverage source, and the seed of a social layer we planned but didn't build). In a craft tool, the empty canvas is the enemy — the app needed to answer "here's what you could make today," not "what would you like to print?"</p>
+
+        <h4>What I'd do differently</h4>
+        <p>I would have pushed earlier on a software-first MVP — a version of Slide that launched as a precision-placement aid for existing Bluetooth-enabled printing devices could have validated willingness to pay for the workflow before committing to the hardware bet. I'd also have invested earlier in the community side: the strongest content always came from other users, and the Printmaker's post-spinout success sells inside a crafting ecosystem that already has community — exactly why it worked.</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<nav class="case-nav">
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%;">
+    <a href="index.html#work">← All work</a>
+    <a href="project-instant-ink.html">Next: Instant Ink + Paper →</a>
+  </div>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-meta">© 2026 Ron Baldwin · San Diego, CA</div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
