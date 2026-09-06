@@ -325,6 +325,89 @@ p { margin: 0 0 18px; color: var(--ink-soft); }
 
 .service-item p { font-size: 16px; color: var(--ink-soft); margin: 0; }
 
+/* ---------- Sprint timeline / pricing ---------- */
+
+.sprint-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 900px) {
+  .sprint-grid { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 560px) {
+  .sprint-grid { grid-template-columns: 1fr; }
+}
+
+.sprint-week {
+  padding-top: 20px;
+  border-top: 1px solid var(--ink);
+  display: flex;
+  flex-direction: column;
+}
+
+.sprint-week .num {
+  font-size: 14px;
+  color: var(--ink-faint);
+  margin-bottom: 16px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.sprint-week h4 {
+  font-size: 18px;
+  margin: 0 0 10px;
+  font-weight: 700;
+}
+
+.sprint-week p {
+  font-size: 16px;
+  color: var(--ink-soft);
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.sprint-deliverable {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--accent);
+  padding-top: 14px;
+  border-top: 1px dashed var(--line);
+  margin: 0;
+}
+
+.pricing-block {
+  margin-top: 64px;
+  padding-top: 48px;
+  border-top: 1px solid var(--line);
+}
+
+.price-tag {
+  font-size: 44px;
+  font-weight: 800;
+  letter-spacing: -0.01em;
+  margin: 0 0 16px;
+}
+
+@media (max-width: 560px) {
+  .price-tag { font-size: 9vw; }
+}
+
+.price-sub {
+  font-size: 18px;
+  color: var(--ink-soft);
+  max-width: var(--text-w);
+  margin: 0 0 12px;
+}
+
+.price-note {
+  font-size: 15px;
+  color: var(--ink-faint);
+  margin: 0;
+}
+
 /* ---------- Case study index (homepage list) ---------- */
 
 .case-list { display: flex; flex-direction: column; }
