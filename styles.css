@@ -235,6 +235,12 @@ h1 {
   background: var(--paper-dim);
 }
 
+.hero-visual {
+  aspect-ratio: 4/3;
+  overflow: hidden;
+  background: var(--paper-dim);
+}
+
 .hero-photo img {
   width: 100%;
   height: 100%;
