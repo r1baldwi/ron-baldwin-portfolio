@@ -341,6 +341,7 @@ p { margin: 0 0 18px; color: var(--ink-soft); }
 }
 
 .sprint-week {
+  height: 100%;
   padding-top: 20px;
   border-top: 1px solid var(--ink);
   display: flex;
@@ -368,7 +369,7 @@ p { margin: 0 0 18px; color: var(--ink-soft); }
   margin: 0 0 16px;
 }
 
-.sprint-deliverable {
+.sprint-week .sprint-deliverable {
   font-size: 14px;
   font-weight: 600;
   color: var(--accent);
