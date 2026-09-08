@@ -225,7 +225,7 @@ h1 {
   font-size: 20px;
   color: var(--ink-soft);
   line-height: 1.6;
-  max-width: 680px;
+  max-width: none;
   margin: 0 0 48px;
 }
 
