@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CourtScout — Ron Baldwin</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css?v=15">
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a href="index.html" class="brand">Ron Baldwin</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">☰</button>
+    <nav class="nav-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work" class="active">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact" class="nav-cta">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<section class="case-hero">
+  <div class="wrap">
+    <div class="eyebrow">Project 06</div>
+    <h1>CourtScout</h1>
+    <p class="role-line">Building a real-time court occupancy sensor to test a hardware thesis — and deciding not to scale when the economics didn't close.</p>
+    <div class="meta-row">
+      <span><strong>Role</strong> Founder, Designer, Builder</span>
+      <span><strong>Location</strong> San Diego</span>
+      <span><strong>Built</strong> 2026</span>
+      <span><strong>Site</strong> <a href="https://courtscout.live" style="text-decoration: underline;">courtscout.live</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap max-text">
+    <div class="case-gallery">
+      <div class="gallery-item"><img src="courtscout-landing.png" alt="CourtScout landing page showing real-time court availability"></div>
+      <div class="gallery-item"><img src="courtscout-device.jpg" alt="Solar-powered occupancy sensor mounted on a court fence at MiraCosta College"></div>
+      <div class="gallery-item"><img src="courtscout-detection.jpg" alt="On-device YOLOv8 detection identifying a player on court"></div>
+    </div>
+    <p class="img-caption">The live product frontend, the solar-powered sensor mounted at MiraCosta College, and the on-device YOLOv8 detection output.</p>
+  </div>
+</section>
+
+<section class="tight">
+  <div class="wrap max-text">
+
+    <div class="frame-block">
+      <div class="frame-label">Problem</div>
+      <div class="frame-body">
+        <p>Public tennis and pickleball courts have no real-time availability data. Players drive out only to find every court full, with no way to check before leaving home. I set out to test whether a low-cost, solar-powered computer vision sensor mounted to a court fence could solve this without any facility infrastructure investment or software integration from the parks department.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">HCI Approach</div>
+      <div class="frame-body">
+        <p>Built the full technical stack before spending a dollar on sales or outreach: firmware on an XIAO ESP32S3 Sense camera module, on-device YOLOv8 ONNX inference, a FastAPI backend on Render, a Supabase database, and a Bolt.new frontend. Deployed a removable test device at MiraCosta College to validate detection accuracy in real outdoor conditions — changing light, court colors, player angles — before any facility conversation happened on the strength of a concept instead of a working system.</p>
+        <p>Paired the technical build with structured customer discovery and a detailed unit economics model, using a bear-case modeling discipline to reach a go/no-go conclusion before committing to sales infrastructure or facility partnerships.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">User Flow</div>
+      <div class="frame-body">
+        <div class="frame-flow">
+          <span class="flow-step">Camera detects occupancy</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">On-device inference</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Data posted to backend</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Live availability on frontend</span>
+          <span class="flow-arrow">→</span>
+          <span class="flow-step">Player checks before leaving home</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">Outcome</div>
+      <div class="frame-body">
+        <p>A working detection system validated for occupancy accuracy in a live outdoor test environment, and customer discovery confirming real wait times at target facilities (Kit Carson Park, Poinsettia Park). The unit economics model surfaced the no-go: the margin model required near-zero data cost, LTE connectivity floored at $5–8 per court per month, and facility WiFi couldn't be reliably assumed across the true addressable market of 30–50 high-demand facilities in the region.</p>
+        <p>Made the explicit decision to stop before committing sales or installation capital — including a drafted proposal for a 10-court municipal facility whose assistant director had invited a submission.</p>
+      </div>
+    </div>
+
+    <div class="frame-block">
+      <div class="frame-label">Reflection</div>
+      <div class="frame-body">
+        <p>I'd have modeled the connectivity constraint — the single load-bearing assumption in the unit economics — before writing a line of firmware. A two-day spreadsheet exercise up front, with realistic cellular cost scenarios and a conservative addressable market count, would have surfaced the no-go weeks earlier and saved real engineering time. The detection problem is solved; the constraint is that public court infrastructure isn't WiFi-ready at scale, and a product that depends on WiFi it can't install can't be reliably deployed where the demand is highest.</p>
+      </div>
+    </div>
+
+    <details class="full-story">
+      <summary>Read the full case study</summary>
+      <div class="full-story-body">
+        <h4>Problem framing</h4>
+        <p>I am a North County San Diego tennis player. The problem I was solving was my own: you check a court's website, see nothing useful, drive twenty minutes, and find every court full. There is no real-time availability anywhere in the public parks system.</p>
+        <p>The hypothesis was that a low-cost, solar-powered computer vision sensor mounted to a court fence could solve this without any facility infrastructure investment or software integration from the parks department. If the camera could detect whether a court was occupied, and if the data could reach a web frontend in near-real-time, a player could check before leaving home. The product was simple. The technical path was tractable. The market felt obvious.</p>
+        <p>What I needed to do before committing capital was validate the unit economics, the connectivity model, and whether real users would pay.</p>
+
+        <h4>Building the minimum working system first</h4>
+        <p>I built the full technical stack before spending a dollar on sales or outreach. The system used an XIAO ESP32S3 Sense camera running YOLOv8 ONNX inference on-device, posting occupancy readings to a FastAPI server on Render, logged to Supabase, and displayed on a Bolt.new frontend. I mounted a removable test device at MiraCosta College to validate detection accuracy in real outdoor conditions with changing light, court colors, and player angles. The detection pipeline worked.</p>
+        <p>The point of this sequence was to make sure I was validating a real product, not a slide deck. Facility contacts and user conversations would happen on the strength of a live system, not a concept.</p>
+
+        <h4>Customer discovery before outreach</h4>
+        <p>Before approaching facilities, I ran customer discovery with players in my network. A friend confirmed real wait times at Kit Carson Park in Escondido and Poinsettia Park in Carlsbad, where waits extended to nearly an hour on weekday nights. This validated that the problem was real and specific, not hypothetical.</p>
+        <p>Willingness to pay was a separate question. Consumer willingness to pay directly for court availability data turned out to be low, consistent with what I found across the broader space. The business model would need to be B2B, selling occupancy data or the service to parks departments or program operators, rather than a direct consumer subscription.</p>
+
+        <h4>The unit economics model surfaced the no-go</h4>
+        <p>The financial model had one load-bearing assumption: data cost. The entire margin in the model rested on connectivity approaching zero dollars per court per month. Facility WiFi partnerships were the only path to a viable unit. LTE connectivity via cellular dongles floored at roughly $5–8 per court per month, which was enough to eliminate margin across realistic subscriber density scenarios.</p>
+        <p>The compounding problem was that connectivity could not be assumed. Public park facilities were not reliably WiFi-equipped, and the true addressable market, when I mapped the actual high-demand courts across San Diego, Riverside, Orange, and Los Angeles counties, was approximately 30–50 facilities, not the hundreds I had initially modeled. The model needed approximately 150–200 subscribers per facility to be viable. At 30–50 total facilities, and with connectivity dependency at each one, the math did not close.</p>
+        <p>I ran an investigation into alternative connectivity options, including Cox WiFi hotspots at public facilities. That path hit a technical wall when band steering on public hotspots pushed connections to 5 GHz, and the ESP32S3 only supports 2.4 GHz. A firmware fix was possible, but the deeper issue was that I would be building a product whose operational viability depended on connectivity infrastructure I did not control at facilities I had not yet signed.</p>
+
+        <h4>The decision to stop</h4>
+        <p>The facility outreach was going reasonably well. The Assistant Director at Ray Love Tennis Center, a 10-court facility in Escondido, had invited a formal proposal. I had a draft ready.</p>
+        <p>I did not submit it.</p>
+        <p>The decision to stop came from the unit economics model, not from a failure of product or outreach. I had a working detection system. I had real customer pain confirmed. I had facility interest at the right level. What I did not have was a path to margin that did not depend on a connectivity assumption I could not reliably secure.</p>
+        <p>The responsible move was to treat this as a validated no-go before committing the capital and time that a formal facility partnership and installation program would have required.</p>
+
+        <h4>What I'd do differently</h4>
+        <p>I would have modeled the connectivity constraint before writing a line of firmware. The load-bearing assumption in the unit economics, the one that everything else depended on, was data cost. I knew intellectually that LTE connectivity added cost. I didn't pressure-test the number against the margin model early enough to let that finding shape the technical architecture choices I made in parallel.</p>
+        <p>A two-day spreadsheet exercise at the start, with realistic cellular cost scenarios and a conservative addressable market count, would have surfaced the no-go weeks earlier and saved meaningful engineering time. I still believe the detection problem is solved. The constraint is not technical. It is that public court infrastructure is not WiFi-ready at scale, and a product that depends on WiFi it cannot install cannot be reliably deployed where the demand is highest.</p>
+      </div>
+    </details>
+
+  </div>
+</section>
+
+<nav class="case-nav">
+  <div class="wrap" style="display:flex; justify-content:space-between; width:100%;">
+    <a href="project-stockvalue.html">← StockValue.Ai</a>
+    <a href="index.html#work">All work →</a>
+  </div>
+</nav>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="foot-meta">© 2026 Ron Baldwin · San Diego, CA</div>
+    <div class="foot-links">
+      <a href="index.html">Home</a>
+      <a href="index.html#work">Portfolio</a>
+      <a href="index.html#about">About</a>
+      <a href="index.html#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+<script src="nav.js"></script>
+</body>
+</html>
