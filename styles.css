@@ -675,7 +675,7 @@ p { margin: 0 0 18px; color: var(--ink-soft); }
   font-weight: 700;
   letter-spacing: 0.04em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--ink);
 }
 
 .frame-body p { margin: 0 0 14px; }
